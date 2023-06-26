@@ -1,0 +1,29 @@
+h1,h2,h3{
+			color:red;
+			background-color:green;
+			text-transform:uppercase;
+		}
+		
+		.raj{
+			color:red;
+			background-color:yellow;
+		}
+		
+		.underline{
+			text-decoration:underline;
+		}
+		
+		.border{
+			border:solid green 2px;
+		}
+		
+		#rajesh{
+			color:pink;
+			background-color:yellow;
+		}
+		
+		h5.demo{
+		background-color:pink;
+		color:red;
+		}
+		
