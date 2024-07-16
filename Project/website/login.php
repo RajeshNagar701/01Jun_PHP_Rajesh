@@ -1,4 +1,11 @@
 <?php
+
+if(isset($_SESSION['user']))
+{	
+	echo "<script> 
+		window.location='index';
+	</script>";
+}			
 include_once('header.php');
 ?>
 
@@ -19,11 +26,11 @@ include_once('header.php');
       <div class="row">
         <div class="offset-md-3 col-md-6">
           <div class="form_contaier">
-            <form action="" method="post" enctype="multiple/form-data">
+            <form action="" method="post">
              
               <div class="form-group">
                 <label for="exampleInputEmail1">Email </label>
-                <input type="email" name="username" class="form-control" id="exampleInputEmail1">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1">
               </div>
 			  <div class="form-group">
                 <label for="exampleInputName1">Password</label>
@@ -31,7 +38,7 @@ include_once('header.php');
               </div>
 			 
               <button type="submit" name="submit" class="">Login</button>
-			  <a class="float-right" href="signup.php" >If You not Register then Click Signup</a>
+			  <a class="float-right" href="signup" >If You not Register then Click Signup</a>
             </form>
           </div>
         </div>

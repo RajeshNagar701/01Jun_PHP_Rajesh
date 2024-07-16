@@ -9,6 +9,7 @@ $_SESSION, you can access it
 form anywhere in the server
 
 */
+
 session_start();
 
 $_SESSION['user']="Raj Nagar";  // CREATE
@@ -17,6 +18,7 @@ $_SESSION['user']="Raj Nagar";  // CREATE
 
 
 //unset($_SESSION['user']); // single session delete
+
 //session_destroy();   // all session delete
 
 

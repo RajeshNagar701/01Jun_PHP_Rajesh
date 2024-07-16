@@ -18,32 +18,50 @@ include_once('header.php');
                   <!--   Kitchen Sink -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Add Feedback
+                            Manage Feedback
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
+                                <table id="table" class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Message</th>
 											<th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-											<td>
-												<a href="" class="btn btn-danger me-1">Delete</a>
-												<a href="" class="btn btn-primary me-1">Edit</a>
-											</td>
-                                        </tr>
+                                        <?php
+										if(!empty($data_feedback))
+										{
+											foreach($data_feedback as $d)
+											{
+											?>
+											<tr>
+												<td><?php echo $d->feed_id;?></td>
+												<td><?php echo $d->name;?></td>
+												<td><?php echo $d->email;?></td>
+												<td><?php echo $d->message;?></td>
+												<td>
+													<a href="delete?delfeed_id=<?php echo $d->feed_id;?>" class="btn btn-danger me-1">Delete</a>		
+													<a href="" class="btn btn-primary me-1">Edit</a>
+												</td>
+											</tr>
+										<?php
+											}
+										}
+										else
+										{
+										?>
+											
+											<tr>
+												<td> DATA NO FOUND </td>
+											</tr>	
+										<?php
+										}
+										?>
                                     </tbody>
                                 </table>
                             </div>

@@ -6,10 +6,14 @@
 
 <!--
 
-Many web applications are connected to a database. The database holds all the information the web application 
+Many web applications are connected to a database. 
+The database holds all the information the web application 
 wish to store and use.
-SQL Injection is a technique which allows attackers to manipulate the SQL ("Structured Query Language") 
-the developer of the web application is using. This typically happens because of lack of data sanitization. 
+SQL Injection is a technique which allows attackers to manipulate the SQL 
+("Structured Query Language") 
+
+the developer of the web application is using. This typically happens because of lack of data sanitization.
+ 
 SQL is used regularly by developers to access database resources. 
 
 $first_name=real_escape_string($_REQUEST['firstname']);
@@ -31,7 +35,7 @@ $mysqli = new mysqli('localhost','root','','test');
 if(isset($_POST['submit']))
 {
 	echo $firstname = $mysqli->real_escape_string($_POST['name']);
-	
+
 	// Escape special characters, if any
 	echo $age = mysqli_real_escape_string($mysqli, $_POST['age']);
 	

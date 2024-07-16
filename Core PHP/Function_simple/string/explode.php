@@ -1,6 +1,9 @@
 <?php
-$text="TOPS Technologies";
-$arr=explode(",",$text);
+$string="Hindi,English,Gujarati";
+
+//convert string to array
+
+$arr=explode(",",$string);
 print_r($arr);
 
 

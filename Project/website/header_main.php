@@ -41,10 +41,19 @@
       <div class="container">
         <div class="top_contact-container">
           <div class="tel_container">
-            <a href="">
-              <img src="images/telephone-symbol-button.png" alt=""> Call : +01 1234567890
-            </a>
-          </div>
+            <a href="" style="float:left">
+              <img src="images/telephone-symbol-button.png" alt=""> Call : +01 1234567890 
+            </a> 
+			
+			<a href="" style="float:left">
+			<?php
+			if(isset($_SESSION['name']))
+			{	
+				echo " / Welcome.. ". $_SESSION['name'];
+			}
+			?>
+			</a> 
+		  </div>
           <div class="social-container">
             <a href="">
               <img src="images/fb.png" alt="" class="s-1">
@@ -98,12 +107,36 @@
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
               </form>
               <div class="login_btn-contanier ml-0 ml-lg-5">
-                <a href="login">
+                <?php
+				if(isset($_SESSION['uid']))
+				{	
+				?>	
+				<a href="pofile">
+                  <img src="images/user.png" alt="">
+                  <span>
+                    My Account  
+                  </span>
+                </a>
+				<a href="logout">
+                  <img src="images/user.png" alt="">
+                  <span>
+                   Logout
+                  </span>
+                </a>
+				<?php
+				}
+				else
+				{
+				?>	
+				<a href="login">
                   <img src="images/user.png" alt="">
                   <span>
                     Login
                   </span>
                 </a>
+				<?php
+				}
+				?>
               </div>
             </div>
           </div>

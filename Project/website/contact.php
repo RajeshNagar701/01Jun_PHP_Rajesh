@@ -19,33 +19,22 @@ include_once('header.php');
       <div class="row">
         <div class="col-md-5">
           <div class="form_contaier">
-            <form>
+            <form action="" method="post">
               <div class="form-group">
                 <label for="exampleInputName1">Name</label>
-                <input type="text" class="form-control" id="exampleInputName1">
+                <input type="text" name="name" class="form-control" id="exampleInputName1">
               </div>
-              <div class="form-group">
-                <label for="exampleInputNumber1">Phone Number</label>
-                <input type="text" class="form-control" id="exampleInputNumber1">
-              </div>
-
+             
               <div class="form-group">
                 <label for="exampleInputEmail1">Email </label>
-                <input type="email" class="form-control" id="exampleInputEmail1">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1">
               </div>
-              <div class="form-group ">
-                <label for="inputState">Select medicine</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Medicine 1</option>
-                  <option selected>Medicine 2</option>
-                  <option selected>Medicine 3</option>
-                </select>
-              </div>
+             
               <div class="form-group">
                 <label for="exampleInputMessage">Message</label>
-                <input type="text" class="form-control" id="exampleInputMessage">
+                <input type="text" name="message" class="form-control" id="exampleInputMessage">
               </div>
-              <button type="submit" class="">Send</button>
+              <button type="submit" name="submit" class="">Send</button>
             </form>
           </div>
         </div>

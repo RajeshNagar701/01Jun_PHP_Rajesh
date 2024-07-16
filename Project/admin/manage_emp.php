@@ -22,28 +22,47 @@ include_once('header.php');
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
+                                <table id="table" class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+											<th>Status</th>
 											<th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-											<td>
-												<a href="" class="btn btn-danger me-1">Delete</a>
-												<a href="" class="btn btn-primary me-1">Edit</a>
-											</td>
-                                        </tr>
+                                        <?php
+										if(!empty($data_employees))
+										{
+											foreach($data_employees as $d)
+											{
+											?>
+											<tr>
+												<td><?php echo $d->emp_id;?></td>
+												<td><?php echo $d->name;?></td>
+												<td><?php echo $d->email;?></td>
+												<td><?php echo $d->status;?></td>
+												<td>
+													<a href="delete?delemp_id=<?php echo $d->emp_id;?>" class="btn btn-danger me-1">Delete</a>		
+													<a href="" class="btn btn-primary me-1">Edit</a>
+												</td>
+											</tr>
+										<?php
+											}
+										}
+										else
+										{
+										?>
+											
+											<tr>
+												<td> DATA NO FOUND </td>
+											</tr>	
+										<?php
+										}
+										?>
                                     </tbody>
                                 </table>
                             </div>

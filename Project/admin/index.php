@@ -1,4 +1,14 @@
-﻿<!DOCTYPE html>
+﻿
+<?php
+if(isset($_SESSION['admin']))
+{	
+	echo "<script> 
+		window.location='dashboard';
+	</script>";
+}	
+?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
@@ -28,17 +38,17 @@
                 <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
                            
                             <div class="panel-body">
-                                <form role="form">
+                                <form action="" method="post" role="form">
                                     <hr />
                                     <h5>Enter Admin Details to Login</h5>
                                        <br />
                                      <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-tag"  ></i></span>
-                                            <input type="text" class="form-control" placeholder="Your Username " />
+                                            <input type="text" name="anm" class="form-control" placeholder="Your Username " />
                                         </div>
-                                                                              <div class="form-group input-group">
+                                     <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-                                            <input type="password" class="form-control"  placeholder="Your Password" />
+                                            <input type="password"  name="apass" class="form-control"  placeholder="Your Password" />
                                         </div>
                                     <div class="form-group">
                                             <label class="checkbox-inline">
@@ -49,7 +59,7 @@
                                             </span>
                                         </div>
                                      
-                                     <a href="index.html" class="btn btn-primary ">Login Now</a>
+                                     <input type="submit" name="submit" class="btn btn-primary ">Login Now</a>
                                    
                                     </form>
                             </div>

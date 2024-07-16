@@ -1,10 +1,15 @@
 <?php
 
-class control
+cinclude_once('../website/model.php');  // step 1 load model
+
+class control extends model // step 2 extends 
 {
 	// magic function that call automatecally when you declare class object
 	function __construct()
 	{
+		
+		model::__construct(); // step 3 call mopdel __construct
+		
 		$url=$_SERVER['PATH_INFO'];
 		switch($url)
 		{

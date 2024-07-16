@@ -1,5 +1,11 @@
 <?php
-$arr=array("Pratik","Shah");  //convert array in string
-echo $string=implode(",",$arr)."<br>";
-echo(join(",",$arr));
+$arr_lag=array("Hindi","English","Gujarati");  //convert array to string
+
+print_r($arr_lag);
+
+
+//convert array to string
+
+echo $string=implode(",",$arr_lag)."<br>";
+echo $string1=join(",",$arr_lag)."<br>";
 ?>

@@ -1,3 +1,14 @@
+
+
+<?php
+if(!($_SESSION['admin']))
+{	
+	echo "<script> 
+		window.location='admin';
+	</script>";
+}	
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,6 +26,27 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+	
+	
+	<!--
+	1 Include jquery File  
+	-->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+	<!--
+	2 Include these two files 
+	-->
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+	
+	<script>
+	$(document).ready(function() 
+	{
+		$('#table').DataTable();
+	} );
+</script>
+
+
 </head>
 <body>
     <div id="wrapper">
@@ -33,7 +65,7 @@
 
                 <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
                 <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
-                <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+                <a href="admin_logout" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
 
             </div>
         </nav>
@@ -97,6 +129,9 @@
                     </li>
 					<li>
                         <a href="manage_feed"><i class="fa fa-user "></i>Feedback </a>   
+                    </li>
+					<li>
+                        <a href="manage_cont"><i class="fa fa-user "></i>Contacts </a>   
                     </li>
                     
                 </ul>

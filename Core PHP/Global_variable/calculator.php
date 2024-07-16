@@ -5,14 +5,14 @@
 </head>
 <body>
 <form action="" method="post">
-<p>Enter Number 1st: <input type="number" name="num1" required /></p>
-<p>Enter Number 2st: <input type="number" name="num2" required /></p>
-<p>
+	<p>Enter Number 1st: <input type="number" name="num1" required /></p>
+	<p>Enter Number 2st: <input type="number" name="num2" required /></p>
+	<p>
 
-<input type="submit"name="sum" value="Sum"/>
-<input type="submit"name="sub" value="Substraction"/></p>
-<input type="submit"name="multi" value="Multiplication"/>
-<input type="submit"name="div" value="Division"/>
+	<input type="submit"name="sum" value="Sum"/>
+	<input type="submit"name="sub" value="Substraction"/></p>
+	<input type="submit"name="multi" value="Multiplication"/>
+	<input type="submit"name="div" value="Division"/>
 </form>
 </body>
 </html>

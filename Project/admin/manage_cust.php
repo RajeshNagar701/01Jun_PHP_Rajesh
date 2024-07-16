@@ -22,28 +22,51 @@ include_once('header.php');
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
+                                <table id="table" class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
+											<th>Profile</th>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Gender</th>
 											<th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-											<td>
-												<a href="" class="btn btn-danger me-1">Delete</a>
-												<a href="" class="btn btn-primary me-1">Edit</a>
-											</td>
-                                        </tr>
+                                        <?php
+										if(!empty($data_customer))
+										{
+											foreach($data_customer as $d)
+											{
+											?>
+											<tr>
+												<td><img src="../website/upload/customers/<?php echo $d->file;?>" width="50px"></td>
+												<td><?php echo $d->uid;?></td>
+												<td><?php echo $d->name;?></td>
+												<td><?php echo $d->email;?></td>
+												<td><?php echo $d->gender;?></td>
+												<td>
+													<a href="status?statusuid=<?php echo $d->uid;?>" class="btn btn-success me-1"><?php echo $d->status;?></a>
+													<a href="delete?deluid=<?php echo $d->uid;?>" class="btn btn-danger me-1">Delete</a>		
+													<a href="" class="btn btn-primary me-1">Edit</a>
+												</td>
+											</tr>
+										<?php
+											}
+										}
+										else
+										{
+										?>
+											
+											<tr>
+												<td> DATA NO FOUND </td>
+											</tr>	
+										<?php
+										}
+										?>
+										
                                     </tbody>
                                 </table>
                             </div>

@@ -18,12 +18,12 @@ Method  2
 
 
 <?php
-
-if(isset($_GET['submit']))
-{
-	echo $_GET['name'];
-	echo $_GET['age'];
-}
+	
+	if(isset($_GET['submit']))
+	{
+		echo $_GET['name'];
+		echo $_REQUEST['age'];
+	}
 ?>
 
 

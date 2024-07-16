@@ -24,7 +24,6 @@ class model
 		echo $sum=$this->a+$this->b."<br>";
 	}
 }
-
 class control extends model
 {
 	function multi()
@@ -35,6 +34,7 @@ class control extends model
 }
 $obj=new control;
 $obj->multi();
+
 /*
 1) single level
 

@@ -32,7 +32,7 @@ trait first  // use trait insted of class
 		echo "This is method2";
 	}
 }
-class sample
+class sample 
 {
 	use first;  // here use word (use) for inheritance of class first
 	

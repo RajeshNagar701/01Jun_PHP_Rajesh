@@ -46,7 +46,7 @@ class abc
 {
 	function sum($a,$b)
 	{
-		echo $a+$b;
+		echo $a+$b."<br>";
 	}
 }
 class xyz extends abc
@@ -54,7 +54,7 @@ class xyz extends abc
 	
 	function sum($a,$b)
 	{
-		abc::sum(5,7);
+		abc::sum(5,8);
 		echo $a*$b;
 	}
 }

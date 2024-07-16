@@ -16,6 +16,7 @@ OOP provides a clear structure for the programs
 OOP provide securities 
 OOP helps to keep the PHP code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
 OOP makes it possible to create full reusable applications with less code and shorter development time
+
 Example :
 
 Class ===   Fruits / car
@@ -26,6 +27,7 @@ oops Features :
 Class 
 Object
 Encapsulation
+
 Inheritance / Reusability    == extends 
 Access Modifier / Visibility  public private protected  
 Polymorphism / overloading / overriding
@@ -67,14 +69,16 @@ class abc
 	{
 		$c=10;
 		echo $this->a+$this->b+$c;
+		echo "</br>";
 	}
 	function multi()
 	{
 		$this->sum();
 		echo $this->a*$this->b;
+		echo "</br>";
 	}
 }
+$obj=new abc;
+$obj->multi();
+echo $obj->a;
 
-$raj=new abc;
-$raj->multi();
-$raj->$a;

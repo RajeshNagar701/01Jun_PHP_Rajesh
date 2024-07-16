@@ -16,7 +16,7 @@ $_ENV
 $_COOKIE 
 $_SESSION
 */
-echo $a=10;
+//echo $a=10;
 
 function addition()    // define variable as super global use any were in program;
 {
